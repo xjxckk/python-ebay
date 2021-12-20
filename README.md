@@ -15,6 +15,7 @@ Set it up here: [https://developer.ebay.com/my/push/?env=production&index=0](htt
 * The request will get redirected by Flask to https://dev.example.com/?challenge_code=123 which eBay will not accept
 
 * The Content-Type header will be added automatically by Flask as 'application/json'
+* You will need to keep the endpoint up, if it is down for 30 days your keyset will be disabled
 
 
 ### The code:
