@@ -1,5 +1,23 @@
 ### Python Flask: eBay Marketplace Account Deletion/Closure Notifications
+Read about it here: [https://developer.ebay.com/marketplace-account-deletion](https://developer.ebay.com/marketplace-account-deletion)
 
+Set it up here: [https://developer.ebay.com/my/push/?env=production&index=0](https://developer.ebay.com/my/push/?env=production&index=0)
+
+
+### How to set it up:
+* pip install flask
+* Set the verification_token and endpoint_url variables to the ones you want to use
+
+* Create a random verification token, it needs to be 32-80 characters long
+
+* There will be errors if you just use '/' as the route as it will redirect eBays request
+* eBay will send a request to https://dev.example.com?challenge_code=123
+* The request will get redirected by Flask to https://dev.example.com/?challenge_code=123 which eBay will not accept
+
+* The Content-Type header will be added automatically by Flask as 'application/json'
+
+
+### The code:
 
 ```
 from flask import Flask, request
