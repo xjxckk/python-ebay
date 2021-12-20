@@ -13,7 +13,8 @@ app = Flask(__name__)
 
 # There will be errors if you just use '/' as the route as it will redirect eBays request
 # eBay will send a request to https://dev.example.com?challenge_code=123
-# The request will get redirected by Flask to https://dev.example.com/?challenge_code=123 which eBay will not accept
+# The request will get redirected by Flask to https://dev.example.com/?challenge_code=123
+# eBay will not accept that redirect and it will cause it to fail
 endpoint = endpoint_url + '/test'
 
 # The Content-Type header will be added automatically by Flask as 'application/json'
