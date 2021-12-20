@@ -16,6 +16,7 @@ Set it up here: [https://developer.ebay.com/my/push/?env=production&index=0](htt
 
 * The Content-Type header will be added automatically by Flask as 'application/json'
 * You will need to keep the endpoint up, if it is down for 30 days your keyset will be disabled
+* Test your endpoint first with https://your_endpoint_url.com/test?challenge_code=123
 
 
 ### The code:
